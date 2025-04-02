@@ -158,9 +158,7 @@ def perform_fitting(df, x_col, y_col):
     y_pred = model.predict(X)
     r2 = r2_score(y, y_pred)
     mae = mean_absolute_error(y, y_pred)
-    rmse = np.sqrt(mean_squared_error(y, y_pred))
-
-
+    rmse = np.sqrt(mean_squared_error(y, y_pred)) 
 
     plt.figure(figsize=(10, 6))
     plt.scatter(X, y, label="Data", alpha=0.7)
