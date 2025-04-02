@@ -161,6 +161,7 @@ def perform_fitting(df, x_col, y_col):
     rmse = np.sqrt(mean_squared_error(y, y_pred))
 
 
+
     plt.figure(figsize=(10, 6))
     plt.scatter(X, y, label="Data", alpha=0.7)
     plt.plot(X, y_pred, color="red", label=f"y = {model.coef_[0]:.2f}x + {model.intercept_:.2f}\nR² = {r2:.2f}, MAE = {mae:.2f}, RMSE = {rmse:.2f}")
