@@ -190,7 +190,7 @@ def perform_multiple_regression(df):
     y_pred = model.predict(X)
     r2 = r2_score(y, y_pred)
     mae = mean_absolute_error(y, y_pred)
-    rmse = mean_squared_error(y, y_pred, squared=False)
+    rmse = np.sqrt(mean_squared_error(y, y_pred))  # ✅ FIXED HERE
 
     plt.figure(figsize=(10, 6))
     sns.scatterplot(x=y, y=y_pred)
@@ -207,7 +207,6 @@ def perform_multiple_regression(df):
     print("\nFeature Coefficients:")
     for feature, coef in zip(features, model.coef_):
         print(f"{feature:40}: {coef:.4f}")
-
 # Function to clean strings and strip whitespaces from the DataFrame
 
 def preprocessing(df):
