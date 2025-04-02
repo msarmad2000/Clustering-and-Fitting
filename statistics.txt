@@ -1,0 +1,8 @@
+Statistics for Teen Pregnancy Rate (per 1000 teens):
+Mean: 34.78
+Median: 34.70
+Mode: 2.39
+Variance: 390.47
+Std_dev: 19.76
+Skewness: 0.04
+Kurtosis: -1.17
