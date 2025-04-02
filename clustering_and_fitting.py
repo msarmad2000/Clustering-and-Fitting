@@ -62,7 +62,7 @@ def plot_statistical_plot(df):
         plot_kws={'alpha': 0.7, 's': 60, 'edgecolor': 'w'}
     )
     pair.fig.suptitle("Statistical Relationships", y=1.05, fontsize=16, weight="bold")
-    pair.savefig("statistical_plot_pair_beautiful.png")
+    pair.savefig("statistical_plot.png")
     plt.show()
 
     # Correlation heatmap
@@ -158,7 +158,8 @@ def perform_fitting(df, x_col, y_col):
     y_pred = model.predict(X)
     r2 = r2_score(y, y_pred)
     mae = mean_absolute_error(y, y_pred)
-    rmse = mean_squared_error(y, y_pred, squared=False)
+    rmse = np.sqrt(mean_squared_error(y, y_pred))
+
 
     plt.figure(figsize=(10, 6))
     plt.scatter(X, y, label="Data", alpha=0.7)
